@@ -16,7 +16,7 @@
         <div class="nav-container">
             <div class="logo">
                 <img id="hlogo" src="partners/headerlogo.png" alt="Logo WD" class="logo-header-img" />
-                <h1>Associados</h1>
+                <h1 id="h1-main">Associados</h1>
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Início</a></li>
@@ -383,7 +383,38 @@
         </svg>
     </a>
 
+    <!-- Back to top bubble for mobile (replaces WhatsApp on small screens) -->
+    <a href="#top" id="backToTop" class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l-7 7h4v7h6v-7h4l-7-7z" fill="currentColor"/></svg>
+    </a>
+
     <script src="script.js"></script>
+    <script>
+        // Back to top: show only after scrolling; smooth scroll to top on click
+        (function(){
+            var back = document.getElementById('backToTop');
+            if(!back) return;
+
+            var showWhenY = 200; // px scrolled before showing button
+
+            function updateVisibility(){
+                if(window.scrollY > showWhenY){
+                    back.classList.add('show');
+                } else {
+                    back.classList.remove('show');
+                }
+            }
+
+            window.addEventListener('scroll', updateVisibility, { passive: true });
+            // initial check
+            updateVisibility();
+
+            back.addEventListener('click', function(e){
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>
 
