@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WD Associados - Excelência em advocacia com compromisso, ética e resultados">
+    <title>WD Associados - Advocacia de Excelência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img id="hlogo" src="partners/headerlogo.png" alt="Logo WD" class="logo-header-img" />
+                <h1>Associados</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre Nós</a></li>
+                <li><a href="#practice" class="nav-link">Áreas de Atuação</a></li>
+                <li><a href="#team" class="nav-link">Nossa Equipe</a></li>
+                <li><a href="#blog" class="nav-link">Artigos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <button class="cta-button nav-cta" onclick="scrollToContact()">Solicitar Consulta</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video2.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Excelência em Advocacia</h1>
+            <p class="hero-subtitle">Compromisso, ética e resultados que transformam</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToContact()">Solicitar Consulta</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('about')">Conheça Nossa História</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nós</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        Com anos de experiência no mercado jurídico, o WD Associados se destaca pela excelência 
+                        no atendimento e pela dedicação em oferecer soluções jurídicas personalizadas para cada cliente.
+                    </p>
+                    <p>
+                        Nossa equipe é composta por profissionais altamente qualificados, comprometidos com a 
+                        ética profissional e com a busca constante por resultados que superem as expectativas. 
+                        Atuamos com transparência, agilidade e um profundo conhecimento técnico em diversas áreas do direito.
+                    </p>
+                    <p>
+                        Acreditamos que cada caso é único e merece atenção especializada. Por isso, desenvolvemos 
+                        estratégias jurídicas sob medida, sempre priorizando os interesses e objetivos de nossos clientes.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="534">0</div>
+                        <div class="stat-label">Casos Resolvidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% de Satisfação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas Section -->
+    <section id="practice" class="section practice-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Áreas de Atuação</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Oferecemos serviços jurídicos especializados em diversas áreas do direito</p>
+            </div>
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">⚖️</div>
+                    <h3>Direito Empresarial</h3>
+                    <p>Assessoria jurídica completa para empresas, incluindo constituição, contratos, fusões e aquisições.</p>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">👔</div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Defesa dos direitos trabalhistas, consultoria em relações de trabalho e negociações coletivas.</p>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">🏠</div>
+                    <h3>Direito Imobiliário</h3>
+                    <p>Transações imobiliárias, regularização de imóveis, contratos de compra e venda e locação.</p>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Direito de Família</h3>
+                    <p>Divórcios, pensão alimentícia, guarda de filhos, inventários e planejamento sucessório.</p>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">📋</div>
+                    <h3>Direito Civil</h3>
+                    <p>Contratos, responsabilidade civil, indenizações e questões relacionadas ao direito privado.</p>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">🏛️</div>
+                    <h3>Direito Tributário</h3>
+                    <p>Planejamento tributário, consultoria fiscal e defesa em processos administrativos e judiciais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Equipe</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Profissionais dedicados e comprometidos com a excelência</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card team-card-left">
+                        <div class="team-image">
+                            <img src="partners/2.jpg" alt="Dr. Wellington Silva" class="team-photo" />
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Wellington Silva</h3>
+                        <p class="team-role">Sócio Fundador</p>
+                        <p class="team-description">Especialista em Direito Empresarial com mais de 15 anos de experiência.</p>
+                    </div>
+                </div>
+                <div class="team-card team-card-center">
+                        <div class="team-image">
+                            <img src="partners/1.jpg" alt="Dra. Daniela Costa" class="team-photo" />
+                    </div>
+                    <div class="team-info">
+                        <h3>Dra. Daniela Costa</h3>
+                        <p class="team-role">Sócia</p>
+                        <p class="team-description">Especialista em Direito de Família e Sucessões com foco em soluções personalizadas.</p>
+                    </div>
+                </div>
+                <div class="team-card team-card-right">
+                        <div class="team-image">
+                            <img src="partners/3.jpg" alt="Dr. Rafael Mendes" class="team-photo" />
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Rafael Mendes</h3>
+                        <p class="team-role">Advogado Sênior</p>
+                        <p class="team-description">Especialista em Direito Trabalhista e Tributário com ampla experiência em litígios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Estamos prontos para ajudá-lo. Entre em contato e agende uma consulta.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. Paulista, 1000 - 10º Andar<br>São Paulo - SP, 01310-100</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 3000-0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@wdassociados.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 9h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecione o assunto</option>
+                            <option value="empresarial">Direito Empresarial</option>
+                            <option value="trabalhista">Direito Trabalhista</option>
+                            <option value="imobiliario">Direito Imobiliário</option>
+                            <option value="familia">Direito de Família</option>
+                            <option value="civil">Direito Civil</option>
+                            <option value="tributario">Direito Tributário</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Newsletter Section -->
+    <section id="blog" class="section blog-section">
+        
+   <div class="section-header">
+                <h2 class="section-title2">Artigos & Notícias</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle2">Fique por dentro das últimas novidades jurídicas e artigos especializados</p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="rj.jpg" alt="Artigo 1" class="blog-img">
+                        <div class="blog-category">Direito Empresarial</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">6 de Novembro, 2025</span>
+                            <span class="blog-author">Por Júnior Carvalho</span>
+                        </div>
+                        <h3 class="blog-title">20 anos da Lei de RJ e falências: respiro para empresas, sufoco para credores</h3>
+                        <p class="blog-excerpt">A recuperação judicial se consolidou como ferramenta indispensável para a preservação dos negócios no Brasil. Ao longo dos 20 anos de existência da Lei 11.101/2005, que criou esse instituto, os pedidos de recuperação cresceram de forma consistente até atingir o seu recorde em 2024.</p>
+                        <a href="https://www.conjur.com.br/2025-nov-06/20-anos-da-lei-de-rj-e-falencias-respiro-para-empresas-sufoco-para-credores/" class="blog-link">Ler mais →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2025/09/22/675x450/1_photo-2025-09-22-11-36-54-59228661.jpg?20251103185024?20251103185024" alt="Artigo 2" class="blog-img">
+                        <div class="blog-category">Direito Trabalhista</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">6 de Novembro, 2025</span>
+                            <span class="blog-author">Por Correio Braziliense</span>
+                        </div>
+                        <h3 class="blog-title">O STF e o debate da pejotização nas relações de trabalho</h3>
+                        <p class="blog-excerpt">"O termo, cada vez mais comum, designa a substituição do contrato tradicional — firmado com a pessoa física — por outro, em nome de pessoa jurídica pertencente ao próprio trabalhador"</p>
+                        <a href="https://www.correiobraziliense.com.br/direito-e-justica/2025/11/7286537-o-stf-e-o-debate-da-pejotizacao-nas-relacoes-de-trabalho.html" class="blog-link">Ler mais →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://ibdfam.org.br/publicador/assets/img/upload/noticias/ad278-pexels-pixabay-278912-(1).jpg" alt="Artigo 3" class="blog-img">
+                        <div class="blog-category">Direito de Família</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">6 de Novembro, 2025</span>
+                            <span class="blog-author">Por IBDFAM</span>
+                        </div>
+                        <h3 class="blog-title">TJSC cria câmaras especializadas em Direito de Família, Sucessões, Infância e Juventude</h3>
+                        <p class="blog-excerpt">O Órgão Especial do Tribunal de Justiça de Santa Catarina – TJSC aprovou a criação da 9ª e da 10ª Câmaras de Direito Civil, ambas com competência exclusiva para matérias de Família, Sucessões, Educação, Infância e Juventude e Registros Públicos. </p>
+                        <a href="https://ibdfam.org.br/noticias/13389/TJSC+cria+c%C3%A2maras+especializadas+em+Direito+de+Fam%C3%ADlia%2C+Sucess%C3%B5es%2C+Inf%C3%A2ncia+e+Juventude" class="blog-link">Ler mais →</a>
+                    </div>
+                    </div>
+                     <!-- Newsletter Subscription -->
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Receba Nossa Newsletter</h3>
+                    <p class="newsletter-text">Mantenha-se atualizado com nossos artigos, notícias jurídicas e dicas exclusivas.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletterEmail" name="email" placeholder="Seu melhor e-mail" required>
+                            <button type="submit" class="btn btn-primary">Assinar</button>
+                        </div>
+                        <p class="newsletter-privacy">Ao assinar, você concorda com nossa política de privacidade.</p>
+                    </form>
+                </div>     
+                </article>
+                
+            </div>
+
+           
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WD Associados</h3>
+                    <p>Excelência em advocacia com compromisso, ética e resultados que transformam.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#practice">Áreas de Atuação</a></li>
+                        <li><a href="#team">Nossa Equipe</a></li>
+                        <li><a href="#blog">Artigos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Áreas de Atuação</h4>
+                    <ul>
+                        <li><a href="#practice">Direito Empresarial</a></li>
+                        <li><a href="#practice">Direito Trabalhista</a></li>
+                        <li><a href="#practice">Direito Imobiliário</a></li>
+                        <li><a href="#practice">Direito de Família</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Av. Paulista, 1000 - 10º Andar<br>São Paulo - SP</p>
+                    <p>Tel: (11) 3000-0000</p>
+                    <p>Email: contato@wdassociados.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WD Associados. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/551130000000?text=Olá,%20gostaria%20de%20solicitar%20uma%20consulta" 
+       class="whatsapp-button" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Fale conosco no WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
