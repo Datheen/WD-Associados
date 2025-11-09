@@ -373,21 +373,49 @@ if (contactForm) {
     contactFormObserver.observe(contactForm);
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    // Set active nav link based on current section
-    const currentSection = window.location.hash || '#home';
-    navLinksArray.forEach(link => {
-        if (link.getAttribute('href') === currentSection) {
-            link.classList.add('active');
+// scroll to the top of the page when reloading
+window.scrollTo(0, 0);
+
+// Mobile Nav functionality
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+if (mobileNav) {
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY) {
+            // Scroll down
+            mobileNav.style.transform = 'translateX(-50%) translateY(100px)';
+        } else {
+            // Scroll up
+            mobileNav.style.transform = 'translateX(-50%) translateY(0)';
         }
+        lastScrollY = window.scrollY;
+
+        // Active link highlighting for mobile nav
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
     });
 
-    // Scroll to section if hash is present
-    if (window.location.hash) {
-        setTimeout(() => {
-            scrollToSection(window.location.hash.substring(1));
-        }, 100);
-    }
-});
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            scrollToSection(targetId);
+        });
+    });
+}
 
